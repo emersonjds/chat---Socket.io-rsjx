@@ -1,0 +1,12 @@
+{
+  "name": "iorxjs",
+  "version": "1.0.0",
+  "description": "Chat with socket.io and rxjs",
+  "main": "index.js",
+  "author": "Emerson Jr",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
+}
