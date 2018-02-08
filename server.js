@@ -1,5 +1,5 @@
 let app = require('express')();
-let htpp = require('http').Server(app);
+let http = require('http').Server(app);
 let io = require('socket.io')(http);
 
 io.on('connect', (socket) => {
