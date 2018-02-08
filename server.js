@@ -8,6 +8,10 @@ app.get('/message', (req, res) => {
     res.send(`<h1> API NO AR </h1>`);
 });
 
+app.get('/', (req, res) => {
+    res.send(`<h1> Jairo Otaku </h1>`);
+});
+
 io.on('connect', (socket) => {
     console.log('user connected');
 
