@@ -4,8 +4,8 @@ let io = require('socket.io')(http);
 
 let port = Number(process.env.PORT || 3000);
 
-app.get('/', (req, res) => {
-    res.send('API no ar');
+app.get('/message', (req, res) => {
+    res.send(`<h1> API NO AR </h1>`);
 });
 
 io.on('connect', (socket) => {
