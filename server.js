@@ -2,8 +2,10 @@ let app = require('express')();
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
 
-app.get('/teste', (req, res) => {
-    res.send(console.log('api esta no ar'));
+let port = Number(process.env.PORT || 3000);
+
+app.get('/', (req, res) => {
+    res.send('API no ar');
 });
 
 io.on('connect', (socket) => {
@@ -14,10 +16,10 @@ io.on('connect', (socket) => {
     });
 
     socket.on('on-message', (message) => {
-        io.emit('message', {type: 'new-message', text: 'message'})
+        io.emit('message', { type: 'new-message', text: 'message' })
     });
 });
 
-http.listen(5000, () => {
-    console.log('start server on port 5000');
+http.listen(port, () => {
+    console.log('start server on port 3000');
 });
