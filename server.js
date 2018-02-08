@@ -2,6 +2,10 @@ let app = require('express')();
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
 
+app.get('/teste', (req, res) => {
+    res.send(console.log('api esta no ar'));
+});
+
 io.on('connect', (socket) => {
     console.log('user connected');
 
