@@ -4,6 +4,10 @@ let io = require('socket.io')(http);
 
 let port = Number(process.env.PORT || 3000);
 
+app.get('/', (req, res) => {
+    res.send(`<h1> Socket inicializado </h1>`);
+});
+
 io.on('connect', (socket) => {
     console.log('user connected');
 
